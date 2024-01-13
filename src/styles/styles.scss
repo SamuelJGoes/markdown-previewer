@@ -1,0 +1,79 @@
+@import './theme-variables.scss';
+
+.main-div {
+  @include themify($themes) {
+    background-color: themed('colorBackground');
+  }
+  height: 100vh;
+  overflow: auto;
+}
+
+#main-title {
+  @include themify($themes) {
+    color: themed('colorTitle');
+  }
+  padding: 10px 50px;
+}
+
+.panel-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  padding-left: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+
+  @include themify($themes) {
+    border: themed('colorBorder') solid 3px;
+    color: themed('colorTitle');
+  }
+}
+
+.expand-button {
+  @include themify($themes) {
+    color: themed('colorButton');
+  }
+  padding: 0px 4px;
+}
+.expand-button:hover {
+  @include themify($themes) {
+    color: themed('colorButton');
+  }
+}
+
+.theme-button {
+  @include themify($themes) {
+    color: themed('colorButton');
+  }
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
+.theme-button:hover {
+  @include themify($themes) {
+    color: themed('colorButton');
+  }
+}
+
+#editor {
+  @include themify($themes) {
+    background-color: themed('colorEditPanel');
+    color: themed('colorText');
+    border: themed('colorBorder') solid 3px;
+  }
+  width: -webkit-fill-available;
+  height: 80vh;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+}
+
+#preview {
+  @include themify($themes) {
+    border: themed('colorBorder') solid 3px;
+    background-color: themed('colorPreviewPanel');
+  }
+  height: 80vh;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  overflow: scroll;
+}

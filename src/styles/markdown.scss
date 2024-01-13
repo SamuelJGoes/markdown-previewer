@@ -1,0 +1,19 @@
+blockquote {
+  border-left: 4px solid #adb5bd;
+  padding-left: 1rem;
+  margin-left: 1em;
+}
+
+th {
+  border: 1px solid gray;
+  padding: 5px;
+}
+
+td {
+  border: 1px solid darkgray;
+  padding: 5px;
+}
+
+img {
+  max-width: -webkit-fill-available;
+}
